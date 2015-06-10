@@ -1,0 +1,31 @@
+<div class="container">
+
+  <h2> Login </h2>
+
+  <% if @errors %>
+  <div class="error">
+    <p class="error_message">ERROR:
+      <%= @errors %>
+      </p>
+  </div>
+  <% end %>
+
+  <form action="/session" method="POST">
+    <div class="form_handler">
+      <label class="form_header" for="email">Email: </label>
+      <input class="form_fields" name="email" type="text">
+    </div>
+    <div class="form_handler">
+      <label class="form_header" for="password">Password: </label>
+      <input class="form_fields" name="password" type="password">
+    </div>
+    <div class="form_handler">
+      <input type="submit">
+    </div>
+  </form>
+
+  <div class="login_logout">
+    (or <a href='/signup'>signup</a>)
+  </div>
+
+</div>
